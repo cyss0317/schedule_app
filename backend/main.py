@@ -22,4 +22,10 @@ def read_root():
     return DB
 
 
+@app.get("/{id}")
+def get_person(id: int):
+    for person in DB:
+        if person.id == id:
+            return person
 
+            
